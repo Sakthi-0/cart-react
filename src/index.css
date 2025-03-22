@@ -1,0 +1,205 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.app{
+    width: 95%;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.header{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(65, 60, 98);
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.cont-inp-list>.container{
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    position: relative;
+    padding: 0px;
+    /* align-items: center; */
+    margin: auto;
+}
+
+.cont-inp-list{
+    padding: 0px 0px 10px 0px;
+    width: 65%;
+    margin-top: 10px;
+    box-shadow: 1px 1px 6px rgb(141, 140, 140);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: whitesmoke;
+    flex-wrap: wrap;
+}
+
+.cont-inp-list>.list-cont{
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 10px;
+    padding-top: 3%;
+    justify-content: center;
+}
+
+.list-cont>.listItem{
+    background-color: white;
+    position: relative;
+    min-width: 25%;
+    text-align: center;
+    text-wrap: nowrap;
+    list-style: none;
+    /* border: 1px solid black; */
+    padding: 10px 0px 10px 0px;
+    box-shadow: 1px 1px 6px rgb(141, 140, 140);
+    border-radius: 10px;
+    flex-direction: row;
+
+}
+
+.listItem>img{
+    height: 200px;
+    width: 200px;
+    position: relative;
+}
+
+.cont-inp-list>.container>.input-cont{
+    width: 50%;
+    position: relative;
+    padding: 10px 10px 10px 10px;
+}
+.cont-inp-list>.container>.input-cont1{
+    width: 50%;
+    position: relative;
+    padding: 10px 10px 10px 10px;
+}
+
+
+.container>.input-cont>.select{
+    position: relative;
+    width: 100%;
+    height: 31px;
+}
+.container>.input-cont1>.input{
+    position: relative;
+    width: 75%;
+    height: 30px;
+}
+
+.container>.input-cont1>button{
+    padding: 8px 10px 8px 10px;
+    background-color: rgb(0, 123, 255);
+    border: none;
+    border-radius: 5px;
+    color: whitesmoke;
+}
+
+.list-cont>.listItem>button{
+    background-color: rgb(0, 123, 255);
+    color: whitesmoke;
+    width: 80%;
+    border: none;
+    padding: 5px;
+}
+
+.full-container{
+    position: relative;
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+}
+
+.cart{
+    position: absolute;
+    height: fit-content;
+    background-color: whitesmoke;
+    width: 25%;
+    right: 5%;
+    top: 2%;
+    display: flex;
+    flex-direction: column;
+    padding: 5px 5px 10px 5px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px rgb(141, 140, 140);
+    align-items: center;
+    gap: 10px;
+}
+
+.cart>.items{
+    display: flex;
+    justify-content: space-around;
+}
+
+.cart>.cart-head{
+    display: flex;
+    justify-content: center;
+    width: 30%;
+    align-items: center;
+    background-color: white;
+    border-radius: 50px;
+    padding: 10px 10px 0px 10px;
+    box-shadow: 1px 1px 6px rgb(141, 140, 140);
+
+}
+
+.cart>.cart-head>h2{
+    text-align: center;
+    font-size: 40px;
+}
+
+.current-bill{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.current-bill>.listItem{
+    background-color: white;
+    position: relative;
+    width: 60%;
+    text-align: center;
+    text-wrap: nowrap;
+    list-style: none;
+    /* border: 1px solid black; */
+    padding-top: 10px;
+    padding-bottom:10px ;
+    box-shadow: 1px 1px 6px rgb(141, 140, 140);
+    border-radius: 10px;
+    gap: 5px;
+}
+
+.listItem>.btn-remove{
+ background-color: rgb(90, 90, 178); 
+ color: white;  
+ border: none;
+ padding: 5px;
+ width: 80%;
+ margin-top: 5px;
+}
+
+.listItem>.btn{
+    background-color: rgb(220, 209, 209);
+    padding: 3px 5px 4px 5px;
+    border: none;
+    border-radius: 5px;
+    color: black;
+}
+
+
+
