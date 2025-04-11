@@ -1,16 +1,17 @@
-*{
-    padding: 0px;
-    margin: 0px;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-.app{
+.app {
     width: 95%;
-    margin: auto;
-    margin-top: 10px;
+    margin: 10px auto;
+    position: relative;
 }
 
-.header{
+.header {
     width: 100%;
     height: 70px;
     display: flex;
@@ -18,188 +19,249 @@
     align-items: center;
     background-color: rgb(65, 60, 98);
     color: white;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-.cont-inp-list>.container{
-    display: flex;
-    justify-content: center;
-    width: 80%;
-    position: relative;
-    padding: 0px;
-    /* align-items: center; */
-    margin: auto;
-}
-
-.cont-inp-list{
-    padding: 0px 0px 10px 0px;
+.cont-inp-list {
     width: 65%;
-    margin-top: 10px;
+    margin: 10px auto;
+    padding-bottom: 10px;
     box-shadow: 1px 1px 6px rgb(141, 140, 140);
     border-radius: 10px;
+    background-color: whitesmoke;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: whitesmoke;
-    flex-wrap: wrap;
 }
 
-.cont-inp-list>.list-cont{
+.cont-inp-list > .container {
     display: flex;
-    position: relative;
-    flex-wrap: wrap;
-    width: 100%;
-    gap: 10px;
-    padding-top: 3%;
     justify-content: center;
+    width: 80%;
+    flex-wrap: wrap;
+    padding: 10px 0;
 }
 
-.list-cont>.listItem{
+.input-cont, .input-cont1 {
+    width: 50%;
+    padding: 10px;
+}
+
+.select,
+.input {
+    width: 100%;
+    height: 35px;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    font-size: 16px;
     background-color: white;
-    position: relative;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: 0.3s ease;
+}
+
+.select:focus,
+.input:focus {
+    border-color: rgb(0, 123, 255);
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.4);
+}
+
+/* === Fancy Button (Add/Search) === */
+.input-cont1 > button {
+    padding: 10px 16px;
+    background: linear-gradient(145deg, rgb(0, 123, 255), rgb(0, 100, 210));
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.input-cont1 > button:hover {
+    background: linear-gradient(145deg, rgb(0, 105, 220), rgb(0, 90, 190));
+}
+
+.list-cont {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px 0;
+    width: 100%;
+}
+
+.listItem {
+    background-color: white;
     min-width: 25%;
     text-align: center;
-    text-wrap: nowrap;
     list-style: none;
-    /* border: 1px solid black; */
-    padding: 10px 0px 10px 0px;
+    padding: 10px 0;
     box-shadow: 1px 1px 6px rgb(141, 140, 140);
     border-radius: 10px;
-    flex-direction: row;
-
 }
 
-.listItem>img{
-    height: 200px;
-    width: 200px;
-    position: relative;
-}
-
-.cont-inp-list>.container>.input-cont{
-    width: 50%;
-    position: relative;
-    padding: 10px 10px 10px 10px;
-}
-.cont-inp-list>.container>.input-cont1{
-    width: 50%;
-    position: relative;
-    padding: 10px 10px 10px 10px;
-}
-
-
-.container>.input-cont>.select{
-    position: relative;
+.listItem > img {
     width: 100%;
-    height: 31px;
-}
-.container>.input-cont1>.input{
-    position: relative;
-    width: 75%;
-    height: 30px;
+    max-width: 200px;
+    height: auto;
 }
 
-.container>.input-cont1>button{
-    padding: 8px 10px 8px 10px;
-    background-color: rgb(0, 123, 255);
-    border: none;
-    border-radius: 5px;
-    color: whitesmoke;
-}
-
-.list-cont>.listItem>button{
+.listItem > button {
     background-color: rgb(0, 123, 255);
     color: whitesmoke;
     width: 80%;
     border: none;
     padding: 5px;
+    margin-top: 10px;
 }
 
-.full-container{
-    position: relative;
-    display: flex;
+.full-container {
+    
     gap: 10px;
     width: 100%;
-    height: 100%;
     padding: 10px;
+    display: flex;
+    flex-wrap: wrap; /* optional */
+    justify-content: space-between;
+    align-items: flex-start;
 }
 
-.cart{
-    position: absolute;
-    height: fit-content;
+.cart {
+    position: relative;
     background-color: whitesmoke;
     width: 25%;
-    right: 5%;
-    top: 2%;
-    display: flex;
-    flex-direction: column;
-    padding: 5px 5px 10px 5px;
+    padding: 10px;
     border-radius: 10px;
     box-shadow: 1px 1px 6px rgb(141, 140, 140);
+    display: flex;
+    flex-direction: column;
     align-items: center;
     gap: 10px;
 }
 
-.cart>.items{
-    display: flex;
-    justify-content: space-around;
-}
-
-.cart>.cart-head{
+.cart-head {
+    background-color: white;
+    padding: 10px;
+    border-radius: 50px;
+    box-shadow: 1px 1px 6px rgb(141, 140, 140);
     display: flex;
     justify-content: center;
-    width: 30%;
     align-items: center;
-    background-color: white;
-    border-radius: 50px;
-    padding: 10px 10px 0px 10px;
-    box-shadow: 1px 1px 6px rgb(141, 140, 140);
-
 }
 
-.cart>.cart-head>h2{
-    text-align: center;
-    font-size: 40px;
+.cart-head > h2 {
+    font-size: 24px;
+    margin: 0;
 }
 
-.current-bill{
+.current-bill {
     display: flex;
-    align-items: center;
     flex-direction: column;
+    align-items: center;
     gap: 10px;
     width: 100%;
 }
 
-.current-bill>.listItem{
-    background-color: white;
-    position: relative;
-    width: 60%;
-    text-align: center;
-    text-wrap: nowrap;
-    list-style: none;
-    /* border: 1px solid black; */
-    padding-top: 10px;
-    padding-bottom:10px ;
-    box-shadow: 1px 1px 6px rgb(141, 140, 140);
-    border-radius: 10px;
+.current-bill .listItem {
+    width: 80%;
+    padding: 10px;
     gap: 5px;
 }
 
-.listItem>.btn-remove{
- background-color: rgb(90, 90, 178); 
- color: white;  
- border: none;
- padding: 5px;
- width: 80%;
- margin-top: 5px;
+.listItem .btn-remove {
+    background-color: rgb(90, 90, 178);
+    color: white;
+    border: none;
+    padding: 5px;
+    width: 80%;
+    margin-top: 5px;
 }
 
-.listItem>.btn{
+.listItem .btn {
     background-color: rgb(220, 209, 209);
-    padding: 3px 5px 4px 5px;
+    padding: 5px;
     border: none;
     border-radius: 5px;
     color: black;
 }
 
+/* ======================
+   RESPONSIVE STYLES
+   ====================== */
 
+@media (max-width: 768px) {
+    .app {
+        width: 100%;
+    }
 
+    .header {
+        font-size: 20px;
+        height: 60px;
+        text-align: center;
+    }
+
+    .cont-inp-list {
+        width: 95%;
+    }
+
+    .cont-inp-list > .container {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    .input-cont, .input-cont1 {
+        width: 90%;
+    }
+
+    .list-cont {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+        gap: 15px;
+        padding: 10px;
+    }
+
+    .listItem {
+        min-width: 100%;
+    }
+
+    .listItem > img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .cart {
+        position: static;
+        width: 100%;
+        margin-top: 20px;
+        padding: 15px;
+    }
+
+    .cart-head {
+        width: auto;
+        padding: 10px;
+    }
+
+    .cart-head > h2 {
+        font-size: 22px;
+    }
+
+    .current-bill .listItem {
+        width: 90%;
+    }
+
+    .list-cont {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+        gap: 15px;
+        padding: 10px;
+    }
+
+    .listItem {
+        width: 100%;
+    }
+}
